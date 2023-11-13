@@ -3,6 +3,18 @@
  - Config TailwindCSS
  - Header
  - Login form
+ - Sign up form
+ - routing
+ - Form validation
+ - useRef hook
+ - Firebase Setup
+ - Deploying our app to production
+ - Creating SignUp User Account
+ - Implement sign in user Api
+ - Created Redux Store with userSlice
+ - Implimented Sing out
+ - Update Profile
+ - 
 
 # Features 
  - Login/Sign-up
