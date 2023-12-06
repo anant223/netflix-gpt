@@ -14,8 +14,19 @@
  - Created Redux Store with userSlice
  - Implimented Sing out
  - Update Profile
- - 
-
+ - BugFix: Sing up user displayname and profile pic update
+ - BugFix: if the user is not logged in Redirect /browse to login page and vice-versa
+ - Unsubscribed to the onAuthStateChanged callback
+ -  Add hardcore value to the constant file
+ - Register the TMDB API & Create APP and get access to the token. 
+ - Get Data from TMDB now playing movie API 
+ - Created custome hooks for nowPlaying Movies
+ - Create MovieSlice
+ - Update Store with movies Data
+ - Fetch Data fro trailer video
+ - Update Store with Trailer video data
+ - Embdeded the Youtbe Video and make it auotopaly
+ 
 # Features 
  - Login/Sign-up
   - sing in / sign up form

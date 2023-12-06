@@ -1,10 +1,9 @@
-import React, { useRef, useState } from 'react'
+import React, {useRef, useState } from 'react'
 import Header from './Header'
 import { checkValidaData } from '../utils/validate'
 import { auth } from '../utils/firebase';
-import {useNavigate} from "react-router-dom";
 import {createUserWithEmailAndPassword,signInWithEmailAndPassword,  updateProfile} from "firebase/auth";
-import { useSelector } from 'react-redux';
+import {useSelector } from 'react-redux';
 
 const Login = () => {
   const [isSingIn , setIsSingIn] = useState(true);
@@ -13,7 +12,6 @@ const Login = () => {
   const email = useRef(null);
   const name = useRef(null);
   const password = useRef(null);
-  const navigate = useNavigate();
   const handleClick = () =>{
     setIsSingIn(!isSingIn)
   }
@@ -39,18 +37,18 @@ const Login = () => {
           const user = userCredential.user;
           updateProfile(user, {
             displayName: name.current.value,
+
             photoURL: "https://avatars.githubusercontent.com/u/118093503?v=4",
           })
             .then(() => {
               // Profile updated!
-              navigate("/browser");
+              
             })
             .catch((error) => {
               // An error occurred
               // ...
             });
           console.log(user);
-          navigate("/browser");
         })
         .catch((err) => {
           const errCode = err.code;
@@ -63,7 +61,6 @@ const Login = () => {
           // Signed in
           const user = userCredential.user;
           console.log(user);
-          navigate("/browser");
         })
         .catch((error) => {
           const errorCode = error.code;
