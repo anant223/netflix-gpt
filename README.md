@@ -26,6 +26,8 @@
  - Fetch Data fro trailer video
  - Update Store with Trailer video data
  - Embdeded the Youtbe Video and make it auotopaly
+ - Create Components (MovieList, MovieCard) for Secondry Container
+ - Added the Movie poster with url
  
 # Features 
  - Login/Sign-up
