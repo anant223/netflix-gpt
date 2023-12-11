@@ -28,6 +28,9 @@
  - Embdeded the Youtbe Video and make it auotopaly
  - Create Components (MovieList, MovieCard) for Secondry Container
  - Added the Movie poster with url
+ - Created Componets (gptSearch, Gpt
+ Search, gptMoviesSuggestion) for GPT
+ - Added multi-lang feature using redux
  
 # Features 
  - Login/Sign-up
