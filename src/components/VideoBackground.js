@@ -22,12 +22,12 @@ const VideoBackground = ({vol,movieId }) => {
   // },[])
   return (
     <div className="player">
-      {/* <iframe
+      <iframe
         className="aspect-video w-full h-[75vh] md:w-full md:h-screen"
         src={`https://www.youtube.com/embed/${trailer?.key}?autoplay=1&mute=${vol}`}
         title="YouTube video player"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-      ></iframe> */}
+      ></iframe>
     </div>
   );
 };
