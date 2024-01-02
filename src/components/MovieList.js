@@ -2,10 +2,12 @@ import React from 'react'
 import MovieCard from './MovieCard'
 
 const MovieList = ({title, movies }) => {
-   
+  //  console.log(title, movies)
   return (
-    <div className='p-6'>
-      <h1 className='text-3xl text-white py-4'>{title}</h1>
+    <div className="">
+      <h2 className=' text-white py-2 table-cell text-xl'>
+        {title}
+      </h2>
       <div className="flex overflow-x-auto">
         <div className="flex">
           {movies?.map((movie) => (
