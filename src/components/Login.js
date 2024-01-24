@@ -52,7 +52,7 @@ const Login = () => {
               // An error occurred
               // ...
             });
-          console.log(user);
+          // console.log(user);
         })
         .catch((err) => {
           const errCode = err.code;

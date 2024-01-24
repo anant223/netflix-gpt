@@ -1,37 +1,35 @@
-import {useSelector } from 'react-redux';
-import React from "react";
-import useMovieTrailer from '../customehooks/useMovieTrailer';
+import { useSelector } from "react-redux";
+import useMovieTrailer from "../customehooks/useMovieTrailer";
+import YouTube from "react-youtube"
 
-
-const VideoBackground = ({vol,movieId }) => {
-  //fetch movie id
+const VideoBackground = ({ readyPalyer, movieId }) => {
+  // Fetch movie id
   useMovieTrailer(movieId);
   const trailer = useSelector((store) => store.movies?.playingTrailer);
-  
-  // useEffect(()=>{
-    //  function onYouTubeIframeAPIReady() {
-    //    const player = new window.YT.Player("player", {
-    //      events: {
-    //        onReady: onPlayerReady,
-    //        onStateChange: onPlayerStateChange,
-    //      },
-    //    });
-    //  }
 
-     
-  // },[])
   return (
-    <div className="player">
-      <iframe
-        className="aspect-video w-full h-[75vh] md:w-full md:h-screen"
-        src={`https://www.youtube.com/embed/${trailer?.key}?autoplay=1&mute=${vol}`}
-        title="YouTube video player"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-      ></iframe>
+    <div className="">
+      <div className="aspect-video overflow-hidden w-auto relative bottom-10">        
+        <iframe
+          className="w-full h-full overflow-hidden"
+          style={{ maxWidth: "100%" }}
+          src={`https://www.youtube.com/embed/${trailer?.key}?autoplay=0&mute=${1}`}
+          title="YouTube video player"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        ></iframe>
+        {/* <YouTube
+          videoId={trailer?.key}
+          opts={{
+            playerVars: {
+              autoplay: 1,
+            },
+          }}
+          onReady={readyPalyer}
+        /> */}
+      </div>
     </div>
   );
 };
 
 export default VideoBackground;
-
 
