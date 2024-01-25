@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react';
+import React, { useState } from 'react';
 import { onAuthStateChanged, signOut } from 'firebase/auth';
 import { useEffect } from 'react'
 import { auth } from '../utils/firebase';
@@ -11,7 +11,6 @@ import { changeLang } from '../utils/langSlice';
 import HomeIcon from "@mui/icons-material/Home";
 import NotificationsIcon from "@mui/icons-material/Notifications";
 import { filterBasedOncategories } from '../utils/movieSlice';
-import useFetchData from '../customehooks/useFetchData';
 import Badge from "@mui/material/Badge";
 import SearchIcon from "@mui/icons-material/Search";
 
@@ -24,7 +23,7 @@ const Header = () => {
   const [inputVal, setInputVal] = useState("")
   const user = useSelector((store) => store.user);
   const GPT = useSelector((store) => store.GPT.showGPTSearch);
-  const moviesList = useSelector((store) => store.movies)
+  // const moviesList = useSelector((store) => store.movies)
 
 
 
