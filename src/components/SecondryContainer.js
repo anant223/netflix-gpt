@@ -3,6 +3,7 @@ import MovieList from './MovieList'
 import { useSelector } from 'react-redux'
 
 const SecondryContainer = () => {
+  
   const movies = useSelector((store) => store.movies);
   const tvs = useSelector((store) => store.movies?.tvShows);
 
